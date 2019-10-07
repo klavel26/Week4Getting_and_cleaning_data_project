@@ -1,0 +1,40 @@
+# This is the code book for the Week4 Getting and Cleaning Data Project
+
+# To get new_tidy_data_final.txt Run the run_analysis.R script! (The first few lines deal with downloading the data necessary!)
+
+# Regarding the Source Data
+The data comes from the Human Activity Recognition Using Smartphones Data Set, to find a full description of this work, 
+Follow this link: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+The data for the project is here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+# Info on The variables for this project
+Xtrain, ytrain, subject_train, Xtest, ytest, subject_test are the variables that contain the downloaded datasets
+features and activity_labels contain the descriptions of the data in the above datasets. 
+
+## Info for run_analysis.R script
+This R script has a few part, it's purpose is to complete the five steps of the project described in the Readme. 
+
+The sections of the R-Code are listed below, with the assumption that the files needed are in the same location - w/ data uncompressed
+ #1 Merging training and test sets to create one data set
+  1.1 set up pathway
+	1.2 double check to make sure everything is there   
+  1.3 Read in training datasets               
+  1.4 Read in testing datasets
+  1.5 Read in Features 
+  1.6 Read in activity labels
+  1.7 Looking at activity/features + description - easier to assign names now
+  1.8 Actually Merge
+
+#2) Extracts only the measurements on the mean and standard deviation for each measurement
+  2.1 Check column names
+  2.2 Make our vector for Defining activity_id, subject_id, mean, std
+  2.3 Subsetting data
+
+#3) Uses descriptive activity names to name the activities in the data set	
+
+#4) Appropriately labels the data set with descriptive variable names.
+		### look in 1.7 and 2.2/2.3
+    
+#5) From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+  5.1 creating a second tidy set of data
+	5.2 Writing the output to txt file
